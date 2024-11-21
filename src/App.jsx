@@ -7,10 +7,12 @@ import Hero from "./components/Hero";
 import Pricing from "./components/Pricing";
 import Roadmap from "./components/Roadmap";
 import Services from "./components/Services";
+import { Analytics } from "@vercel/analytics/react";
 
 const App = () => {
   return (
     <>
+      <Analytics /> {/* Add the Analytics */}
       <div className="pt-[4.75rem] lg:pt-[5.25rem] overflow-hidden">
         <Header />
         <Hero />
@@ -21,7 +23,6 @@ const App = () => {
         <Roadmap />
         <Footer />
       </div>
-
       <ButtonGradient />
     </>
   );
